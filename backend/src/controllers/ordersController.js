@@ -4,7 +4,7 @@ import ordersModel from "../models/orders.js";
 
 // SELECT
 ordersController.getorders = async (req, res) => {
-  const orders = await productsModel.find().populate("idCostumers");
+  const orders = await ordersModel.find().populate("idCostumers").populate("idProducts");
   res.json(orders);
 };
 
@@ -18,9 +18,9 @@ ordersController.createorders = async (req, res) => {
 
 // DELETE
 ordersController.deleteorders = async (req, res) => {
-  const deletedOrder = await productsModel.findByIdAndDelete(req.params.id);
+  const deletedOrder = await ordersModel.findByIdAndDelete(req.params.id);
   if (!deletedOrder) {
-    return res.status(404).json({ message: "Producto no encontrado" });
+    return res.status(404).json({ message: "orden no encontrada" });
   }
   res.json({ message: "Order deleted" });
 };

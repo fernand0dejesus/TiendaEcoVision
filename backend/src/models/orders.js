@@ -14,20 +14,25 @@ const ordersSchema = new Schema(
         require: true,
         ref:"customers"
     },
-    desciption: {
-      type: String,
+    idProduct: {
+      type: Schema.ObjectId,
+        require: true,
+        ref:"products"
+    },
+    total: {
+      type: Number,
+      require: true,
       
     },
-    price: {
-      type: Number,
+    status: {
+      type: Boolean,
       require: true,
-      min: 0,
+      
     },
-    stock: {
-      type: Number,
-      require: true,
-      min: 0,
-    },
+    shipingAdress: {
+      type: String,
+      require: true
+    }
   },
   {
     timestamps: true,
@@ -36,3 +41,9 @@ const ordersSchema = new Schema(
 );
 
 export default model("orders", ordersSchema);
+/*idCustomers, idProduct, total, status, shipingAdress
+"idCustomers": "ObjectId('67dd959e54b54fcc3510360c')",
+"idProduct": "ObjectId('67dd9936a06f39d3247d3898')",
+"total": 100.00,
+"status": true,
+"shippingAddress": "Calle Ejemplo 123, Ciudad, País"*/
