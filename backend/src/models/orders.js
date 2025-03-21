@@ -16,6 +16,7 @@ const ordersSchema = new Schema(
     },
     desciption: {
       type: String,
+      
     },
     price: {
       type: Number,
