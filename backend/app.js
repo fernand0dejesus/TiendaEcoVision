@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 
 // Definir las rutas de las funciones que tendrá la página web
-app.use("/api/", );
-app.use("/api/",);
-app.use("/api/",);
+app.use("/api/products", productsRoutes);
+app.use("/api/customers",customersRoutes);
+app.use("/api/orders",ordersRoutes);
 app.use("/api/",);
 app.use("/api/");
 
