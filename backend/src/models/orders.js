@@ -9,7 +9,7 @@ import { Schema, model } from "mongoose";
 
 const ordersSchema = new Schema(
   {
-    idCustomers: {
+    idCustomer: {
         type: Schema.ObjectId,
         require: true,
         ref:"customers"
@@ -17,7 +17,7 @@ const ordersSchema = new Schema(
     idProduct: {
       type: Schema.ObjectId,
         require: true,
-        ref:"products"
+        ref:"Products"
     },
     total: {
       type: Number,
