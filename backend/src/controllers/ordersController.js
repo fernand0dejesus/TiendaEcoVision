@@ -4,14 +4,14 @@ import ordersModel from "../models/orders.js";
 
 // SELECT
 ordersController.getorders = async (req, res) => {
-  const orders = await productsModel.find();
+  const orders = await productsModel.find().populate("idCostumers");
   res.json(orders);
 };
 
 // INSERT
 ordersController.createorders = async (req, res) => {
-  const { name, description, price, stock } = req.body;
-  const newOrder = new ordersModel({ name, description, price, stock });
+  const { idCustomers, idProduct, total, status, shipingAdress } = req.body;
+  const newOrder = new ordersModel({ idCustomers, idProduct, total, status, shipingAdress });
   await newOrder.save();
   res.json({ message: "Order saved" });
 };
@@ -28,15 +28,13 @@ ordersController.deleteorders = async (req, res) => {
 // UPDATE
 ordersController.updateorders = async (req, res) => {
   // Solicito todos los valores
-  const { name, description, price, stock } = req.body;
+  const { idCustomers, idProduct, total, status, shipingAdress } = req.body;
   // Actualizo
   await ordersModel.findByIdAndUpdate(
     req.params.id,
     {
-      name,
-      description,
-      price,
-      stock,
+      
+idCustomers, idProduct, total, status, shipingAdress
     },
     { new: true }
   );
