@@ -13,16 +13,15 @@ const shipmentsSchema = new Schema(
   {
     idOrder: {
       type: Schema.ObjectId,
-      require: true,
       ref:"orders"
     },
     shipDate: {
       type: Date,
-      require: true
+
     },
     recivedDate: {
       recivedDate: Date,
-      require: true,
+
       
     }
   },

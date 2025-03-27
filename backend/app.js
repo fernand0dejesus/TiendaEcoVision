@@ -4,7 +4,7 @@ import productsRoutes from "./src/routes/products.js"
 import customersRoutes from "./src/routes/customers.js"
 import ordersRoutes from "./src/routes/orders.js"
 import shipmentsRoutes from "./src/routes/shipments.js"
-import reviewsRoutes from "./src/controllers/reviewsController.js";
+import reviewsRoutes from "./src/routes/reviews.js";
 //routes
 
 // Creo una constante que es igual a la libreria que importé

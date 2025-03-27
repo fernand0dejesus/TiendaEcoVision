@@ -13,12 +13,11 @@ const reviewsSchema = new Schema(
   {
     idProduct: {
       type: Schema.ObjectId,
-      require: true,
       ref:"products"
     },
     idCustomer: {
         type: Schema.ObjectId,
-        require: true,
+  
         ref:"cutomers"
       },
     date: {
@@ -27,12 +26,12 @@ const reviewsSchema = new Schema(
     },
     comment: {
       recivedDate: String,
-      require: true,
+
       
     },
     rating: {
         type: Number,
-        require: true,
+  
         
       },
   },
