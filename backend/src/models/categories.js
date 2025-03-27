@@ -28,4 +28,4 @@ const categoriesSchema = new Schema(
   }
 );
 
-export default model("shipments", categoriesSchema);
+export default model("categories", categoriesSchema);
