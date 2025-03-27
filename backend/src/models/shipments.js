@@ -18,7 +18,7 @@ const shipmentsSchema = new Schema(
     },
     shipDate: {
       type: Date,
-      requiere: true
+      require: true
     },
     recivedDate: {
       recivedDate: Date,

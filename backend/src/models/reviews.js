@@ -23,7 +23,7 @@ const reviewsSchema = new Schema(
       },
     date: {
       type: Date,
-      requiere: true
+      require: true
     },
     comment: {
       recivedDate: String,
