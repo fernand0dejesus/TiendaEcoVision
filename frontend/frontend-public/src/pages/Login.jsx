@@ -23,7 +23,6 @@ function Login() {
         </div>
       </div>
 
-      <footer className="footer">© 2025 EcoVision</footer>
     </div>
   );
 }

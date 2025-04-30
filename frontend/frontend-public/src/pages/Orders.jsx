@@ -1,4 +1,6 @@
+// src/pages/Orders.jsx
 import './Orders.css';
+import Footer from '../components/Footer';  // Asegúrate de importar el Footer correctamente
 
 function Orders() {
   return (
@@ -18,7 +20,7 @@ function Orders() {
           </div>
         </div>
       </div>
-      <footer className="footer">© 2025 EcoVision</footer>
+
     </div>
   );
 }

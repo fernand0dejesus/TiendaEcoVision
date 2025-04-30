@@ -1,73 +1,88 @@
 /* ========== GLOBAL RESET Y BASE ========== */
 html, body, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* ========== ESTRUCTURA GENERAL DE LA PÁGINA ========== */
-  .orders-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-  }
-  
-  /* ========== CONTENIDO ========== */
-  .orders-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-  }
-  
-  /* ========== CAJA DE ÓRDENES ========== */
-  .orders-box {
-    background-color: white;
-    border: 2px solid #D4A16A;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    padding: 30px;
-    max-width: 600px;
-    width: 100%;
-    text-align: left;
-  }
-  
-  .orders-box h2 {
-    color: #8B4513;
-    margin-bottom: 20px;
-  }
-  
-  /* ========== ÍTEMS DE ORDEN ========== */
-  .order-item {
-    background-color: #F9F5F0;
-    border-left: 5px solid #D4A16A;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-  }
-  
-  /* ========== PIE DE PÁGINA ========== */
-  .footer {
-    background-color: #8B4513;
-    color: white;
-    text-align: center;
-    padding: 20px 0; /* Aumentamos el padding para darle más altura */
-    margin-top: auto;
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
-  }
-  
-  /* ========== PARA PAGINAS DE LOGIN U OTRAS ========== */
-  .login-page {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-  }
-  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========== ESTRUCTURA GENERAL DE LA PÁGINA ========== */
+.orders-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Asegura que el contenedor ocupe toda la pantalla */
+  background-color: white;
+  width: 100%; /* Se asegura que ocupe el 100% del ancho de la pantalla */
+}
+
+/* ========== ENCABEZADO ========== */
+.header-bg {
+  height: 35vh;
+  background: linear-gradient(to bottom, #D4A16A 72%, #8B4513 100%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.bg-title {
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+}
+
+/* ========== CENTRADO DEL CONTENIDO ========== */
+.orders-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Cambié a center para alinear la caja en el centro */
+  padding: 40px 0;
+  width: 100%; /* Se asegura que ocupe el 100% del ancho de la pantalla */
+}
+
+.orders-box {
+  background-color: white;
+  border: 2px solid #D4A16A;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  max-width: 600px;  /* Tamaño máximo de la caja */
+  width: 100%; /* Se asegura que ocupe todo el ancho dentro del max-width */
+  text-align: left;
+}
+
+.orders-box h2 {
+  color: #8B4513;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  background-color: #F9F5F0;
+  border-left: 5px solid #D4A16A;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+/* ========== PIE DE PÁGINA ========== */
+.footer {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* Esto asegura que el pie de página se quede abajo */
+}

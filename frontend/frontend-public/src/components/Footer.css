@@ -1,0 +1,42 @@
+/* ========== GLOBAL RESET Y BASE ========== */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* ========== ESTRUCTURA DEL PIE DE PÁGINA ========== */
+  .footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;  /* Asegura que ocupe el 100% del ancho de la página */
+    position: relative;
+    bottom: 0;
+    margin-top: auto; /* Esto hace que el footer se quede al final de la pantalla */
+    display: flex;
+    justify-content: center;  /* Centra el contenido del pie de página */
+    align-items: center;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Estilo adicional para mejorar el espaciado en pantallas más pequeñas */
+  @media (max-width: 600px) {
+    .footer {
+      padding: 10px;
+    }
+  
+    .footer p {
+      font-size: 0.875rem;
+    }
+  }
+  
