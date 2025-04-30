@@ -20,7 +20,6 @@ function Orders() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
