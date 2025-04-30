@@ -1,0 +1,76 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a0522d; /* marrón */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    height: 70px;
+    box-sizing: border-box;
+    z-index: 1000;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  
+  .search-box {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    width: 280px;
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  /* 👇 Ajustes para responsive (celulares) */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 15px 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .search-box {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
