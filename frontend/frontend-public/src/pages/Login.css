@@ -1,131 +1,131 @@
 /* ========== GLOBAL RESET Y BASE ========== */
 html, body, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* ========== ESTRUCTURA GENERAL DE LA PÁGINA ========== */
-  .login-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-  }
-  
-  /* ========== ENCABEZADO ========== */
-  .header-bg {
-    height: 35vh;
-    background: linear-gradient(to bottom, #D4A16A 72%, #8B4513 100%);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 30px;
-  }
-  
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .bg-title {
-    font-size: 3rem;
-    color: white;
-    z-index: 1;
-  }
-  
-  /* ========== CENTRADO DEL FORMULARIO ========== */
-  .login-form-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-    margin-top: -80px; /* opcional: hace que suba un poco sobre el header */
-  }
-  
-  /* ========== FORMULARIO ========== */
-  .login-form {
-    width: 100%;
-    max-width: 400px;
-    padding: 40px;
-    background-color: white;
-    border: 2px solid #D4A16A;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    text-align: center;
-  }
-  
-  .login-form h2 {
-    color: #8B4513;
-    margin-bottom: 20px;
-  }
-  
-  .divider {
-    height: 2px;
-    background-color: #D4A16A;
-    border: none;
-    margin: 20px 0;
-  }
-  
-  .login-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-  }
-  
-  /* ========== BOTONES ========== */
-  .login-btn {
-    width: 100%;
-    background-color: #D4A16A;
-    color: white;
-    padding: 12px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .signup-btn {
-    width: 100%;
-    background-color: #8B4513;
-    color: white;
-    padding: 12px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  /* ========== PIE DE PÁGINA ========== */
-  .footer {
-    background-color: #8B4513;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: auto;
-  }
-  .login-page {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-  }
-    
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========== ESTRUCTURA GENERAL DE LA PÁGINA ========== */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  width: 100vw;
+}
+
+/* ========== ENCABEZADO ========== */
+.header-bg {
+  height: 35vh;
+  background: linear-gradient(
+      to bottom,
+      #D4A16A 0%,
+      #D4A16A 60%,
+      #B8875C 65%,
+      #8B4513 70%,
+      #8B4513 100%
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.bg-title {
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+}
+
+/* ========== CENTRADO DEL FORMULARIO ========== */
+.login-form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin-top: -80px; /* opcional: hace que suba un poco sobre el header */
+}
+
+/* ========== FORMULARIO ========== */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: white;
+  border: 2px solid #D4A16A;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-form h2 {
+  color: #8B4513;
+  margin-bottom: 20px;
+}
+
+.divider {
+  height: 2px;
+  background-color: #D4A16A;
+  border: none;
+  margin: 20px 0;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ========== BOTONES ========== */
+.login-btn {
+  width: 100%;
+  background-color: #D4A16A;
+  color: white;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #8B4513;
+  color: white;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ========== PIE DE PÁGINA ========== */
+.footer {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}

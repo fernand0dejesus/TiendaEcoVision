@@ -1,0 +1,103 @@
+.home-container {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Barra superior */
+  .top-bar {
+    background-color: #8B4513;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+    color: white;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+  }
+  
+  .search-bar .icon {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Sección que contiene las filas de imágenes */
+  .image-section {
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Cada fila de imágenes */
+  .row {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #D4A16A, #8B4513);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    flex-wrap: nowrap;
+  }
+  
+  /* Imágenes individuales */
+  .row img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+  }
+  
+  /* Separador */
+  .divider {
+    height: 10px;
+    background-color: #8B4513;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  /* Pie de página */
+  .footer {
+    margin-top: auto;
+    background-color: #8B4513;
+    color: white;
+    text-align: left;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .footer .logo strong {
+    color: #D4A16A;
+    font-weight: bold;
+  }
+  .home-container {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+  }
+    
