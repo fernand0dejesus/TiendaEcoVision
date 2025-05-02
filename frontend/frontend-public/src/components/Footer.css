@@ -1,42 +1,38 @@
 /* ========== GLOBAL RESET Y BASE ========== */
 html, body, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* ========== ESTRUCTURA DEL PIE DE PÁGINA ========== */
+  height: 100%; /* Asegura que el contenedor principal ocupe toda la altura de la ventana */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Utiliza flexbox para estructurar la página */
+  flex-direction: column; /* Organiza los elementos en una columna */
+}
+
+/* ========== ESTRUCTURA DEL PIE DE PÁGINA ========== */
+.footer {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;  /* Asegura que ocupe el 100% del ancho de la página */
+  display: flex;
+  justify-content: center;  /* Centra el contenido del pie de página */
+  align-items: center;
+  margin-top: auto; /* Empuja el footer hacia abajo, pero solo si el contenido es más corto que la ventana */
+}
+
+/* Ajuste para el texto dentro del footer */
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Estilo adicional para mejorar el espaciado en pantallas más pequeñas */
+@media (max-width: 600px) {
   .footer {
-    background-color: #8B4513;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    width: 100%;  /* Asegura que ocupe el 100% del ancho de la página */
-    position: relative;
-    bottom: 0;
-    margin-top: auto; /* Esto hace que el footer se quede al final de la pantalla */
-    display: flex;
-    justify-content: center;  /* Centra el contenido del pie de página */
-    align-items: center;
+    padding: 100px;
   }
-  
+
   .footer p {
-    margin: 0;
-    font-size: 1rem;
+    font-size: 0.875em;
   }
-  
-  /* Estilo adicional para mejorar el espaciado en pantallas más pequeñas */
-  @media (max-width: 600px) {
-    .footer {
-      padding: 100px;
-    }
-  
-    .footer p {
-      font-size: 0.875em;
-    }
-  }
-  
+}

@@ -17,6 +17,41 @@ const reviews = [
     rating: 5,
     text: "La ropa es hermosa y se nota el compromiso con el medio ambiente.",
   },
+  {
+    name: "Mariana López",
+    rating: 5,
+    text: "Muy satisfecha con mi compra. Llegó rápido y todo venía perfectamente presentado.",
+  },
+  {
+    name: "Jorge Ramírez",
+    rating: 3,
+    text: "Los productos son buenos, pero esperaba más opciones en tallas.",
+  },
+  {
+    name: "Valentina Ortiz",
+    rating: 4,
+    text: "Buena relación calidad-precio. El empaque reciclado es un plus.",
+  },
+  {
+    name: "Esteban Ruiz",
+    rating: 5,
+    text: "¡Increíble! Todo llegó tal cual como lo mostraban en las fotos.",
+  },
+  {
+    name: "Camila Ríos",
+    rating: 4,
+    text: "Los productos son lindos y de buena calidad. Tardó un día más en llegar.",
+  },
+  {
+    name: "Martín Torres",
+    rating: 5,
+    text: "Me encantó la experiencia de compra. Todo es muy amigable con el medio ambiente.",
+  },
+  {
+    name: "Natalia Pérez",
+    rating: 2,
+    text: "Bonita idea, pero el producto no era lo que esperaba. Podrían mejorar la descripción.",
+  },
 ];
 
 function Reviews() {

@@ -20,13 +20,14 @@ html, body, #root {
 
 /* ========== PIE DE PÁGINA ========== */
 footer {
-  margin-top: auto; /* Empuja el footer hacia abajo */
   background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
 }
 
+/* Enlaces dentro del footer */
 footer a {
   color: white;
   text-decoration: none;
@@ -34,4 +35,16 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Ajustes en el body para que el contenido crezca y el footer se quede en el fondo */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Asegura que la altura del body ocupe siempre la ventana completa */
+}
+
+/* El contenido principal ocupa el espacio disponible */
+main {
+  flex: 1; /* Esto hace que el contenido ocupe todo el espacio entre el encabezado y el footer */
 }
