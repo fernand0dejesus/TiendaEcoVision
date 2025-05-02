@@ -11,7 +11,7 @@ function Navbar() {
         <li><Link to="/">Ropa</Link></li>
         <li><Link to="/ordenes">Órdenes</Link></li>
         <li><Link to="/stores">Envíos</Link></li>
-        <li><Link to="/resenas">Reseñas</Link></li>
+        <li><Link to="/resenas">Reviews</Link></li>
         <li><Link to="/categorias">Categorías</Link></li>
         <li><Link to="/promociones">Promociones</Link></li>
         <li><Link to="/login">Iniciar Sesión</Link></li>

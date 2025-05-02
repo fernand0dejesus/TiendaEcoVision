@@ -1,0 +1,48 @@
+.reviews-container {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .reviews-content {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .reviews-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8B4513;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .review-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-left: 6px solid #D4A16A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .review-card h3 {
+    margin: 0 0 10px;
+    color: #8B4513;
+  }
+  
+  .stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  

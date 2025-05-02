@@ -8,7 +8,7 @@ import Login from './pages/Login.jsx';
 import Orders from './pages/Orders.jsx'; // 👈 Importa Orders
 import Footer from './components/Footer';
 import Stores from './pages/Stores.jsx';
-
+import Reviews from './pages/Reviews.jsx';
 
 
 
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/ordenes" element={<Orders />} /> {/* 👈 Usa Orders aquí */}
         <Route path="/stores" element={<Stores/>} />
-        <Route path="/resenas" element={<div>Reseñas</div>} />
+        <Route path="/resenas" element={<Reviews/>} />
         <Route path="/categorias" element={<div>Categorías</div>} />
         <Route path="/promociones" element={<div>Promociones</div>} />
         <Route path="/about" element={<About />} />

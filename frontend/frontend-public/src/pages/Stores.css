@@ -1,11 +1,5 @@
 
-.stores-container {
-    background: url('../assets/background.jpg') ;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+
   
   .top-bar {
     background-color: #8B4513;
@@ -60,7 +54,7 @@
   
   .store-card img {
     width: 240px;
-    height: 180px;
+    height: 280px;
     object-fit: cover;
   }
   

@@ -43,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f3e8e8;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -70,4 +70,22 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+body {
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.footer {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;  /* Asegura que ocupe el 100% del ancho de la página */
+  position: relative;
+  bottom: 0;
+  margin-top: auto; /* Esto hace que el footer se quede al final de la pantalla */
+  display: flex;
+  justify-content: center;  /* Centra el contenido del pie de página */
+  align-items: center;
 }
