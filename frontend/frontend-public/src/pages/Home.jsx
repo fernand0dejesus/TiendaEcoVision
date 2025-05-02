@@ -1,5 +1,8 @@
 // src/pages/Home.jsx
+
+import React from 'react';
 import './Home.css';
+import CardRopa from '../components/CardRopa';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpeg';
@@ -9,38 +12,63 @@ function Home() {
   return (
     <div className="home-container">
       <header className="top-bar">
-        <nav className="menu">
-          <ul>
-            <li>Ropa</li>
-            <li>Ordenes</li>
-            <li>Envíos</li>
-            <li>Reseñas</li>
-            <li>Categorías</li>
-            <li>Promociones</li>
-          </ul>
-        </nav>
-        <div className="search-bar">
-          <input type="text" placeholder="Busca aquí los artículos que tú necesitas..." />
-          <span className="icon">♻️</span>
-        </div>
+        {/* ... menú y barra de búsqueda ... */}
       </header>
 
       <main className="image-section">
+        {/* Primera fila de productos */}
         <div className="row">
-          <img src={img1} alt="Producto eco" />
-          <img src={img2} alt="Etiqueta ecológica" />
+          <CardRopa
+            imgSrc={img1}
+            altText="Camiseta algodón orgánico"
+            title="Camiseta Orgánica Eco"
+            description="Camiseta 100% algodón orgánico, suave y transpirable. Ideal para uso diario."
+            price={29.99}
+            stock={12}
+            isNew={true}
+            onSale={false}
+          />
+          <CardRopa
+            imgSrc={img2}
+            altText="Etiqueta reciclada"
+            title="Etiqueta Ecológica"
+            description="Etiqueta hecha con papel reciclado y tintas ecológicas."
+            price={2.5}
+            stock={50}
+            isNew={false}
+            onSale={true}
+          />
         </div>
 
         <div className="divider" />
 
+        {/* Segunda fila de productos */}
         <div className="row">
-          <img src={img3} alt="Etiquetas recicladas" />
-          <img src={img4} alt="Etiqueta en prenda" />
+          <CardRopa
+            imgSrc={img3}
+            altText="Material reciclado"
+            title="Material Reciclado"
+            description="Prenda confeccionada con materiales 100% reciclados, cuidando el planeta."
+            price={45.0}
+            stock={0} // Sin stock para probar estado agotado
+            isNew={false}
+            onSale={false}
+          />
+          <CardRopa
+            imgSrc={img4}
+            altText="Diseño sostenible"
+            title="Diseño Sostenible"
+            description="Prenda con diseño ético y sostenible, fabricada localmente."
+            price={39.99}
+            stock={7}
+            isNew={true}
+            onSale={true}
+          />
         </div>
       </main>
 
       <footer className="footer">
-        <span className="logo">ECO <strong>Vision</strong></span>
+        {/* ... pie de página ... */}
       </footer>
     </div>
   );

@@ -1,0 +1,131 @@
+/* src/components/CardRopa.css */
+
+/* Contenedor principal del card */
+.card-ropa {
+    width: 45%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Wrapper para la imagen y badges */
+  .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Imagen del producto */
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Contenedor de badges */
+  .badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Estilos para badges */
+  .badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  /* Badge "Nuevo" */
+  .badge.new {
+    background-color: #28a745; /* verde */
+  }
+  
+  /* Badge "Oferta" */
+  .badge.sale {
+    background-color: #dc3545; /* rojo */
+  }
+  
+  /* Contenido textual */
+  .card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Título del producto */
+  .card-title {
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  
+  /* Descripción */
+  .card-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 12px;
+    flex-grow: 1;
+  }
+  
+  /* Precio */
+  .card-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 8px;
+  }
+  
+  /* Stock */
+  .card-stock {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Stock disponible */
+  .card-stock.in-stock {
+    color: #28a745;
+  }
+  
+  /* Stock agotado */
+  .card-stock.out-stock {
+    color: #dc3545;
+  }
+  
+  /* Botón agregar al carrito */
+  .btn-add-cart {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botón deshabilitado */
+  .btn-add-cart:disabled,
+  .btn-add-cart[aria-disabled="true"] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Hover botón */
+  .btn-add-cart:not(:disabled):hover {
+    background-color: #6f3e0a;
+  }
+  
