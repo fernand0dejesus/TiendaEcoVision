@@ -32,11 +32,11 @@ html, body, #root {
   /* Estilo adicional para mejorar el espaciado en pantallas más pequeñas */
   @media (max-width: 600px) {
     .footer {
-      padding: 10px;
+      padding: 100px;
     }
   
     .footer p {
-      font-size: 0.875rem;
+      font-size: 0.875em;
     }
   }
   

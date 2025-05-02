@@ -19,22 +19,7 @@ html, body, #root {
 }
 
 /* ========== ENCABEZADO ========== */
-.header-bg {
-  height: 35vh;
-  background: linear-gradient(
-      to bottom,
-      #D4A16A 0%,
-      #D4A16A 60%,
-      #B8875C 65%,
-      #8B4513 70%,
-      #8B4513 100%
-  );
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 30px;
-}
+
 
 .logo {
   position: absolute;
@@ -122,10 +107,3 @@ html, body, #root {
 }
 
 /* ========== PIE DE PÁGINA ========== */
-.footer {
-  background-color: #8B4513;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: auto;
-}

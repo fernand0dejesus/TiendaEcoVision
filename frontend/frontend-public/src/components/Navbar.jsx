@@ -10,7 +10,7 @@ function Navbar() {
       <ul className="nav-links">
         <li><Link to="/">Ropa</Link></li>
         <li><Link to="/ordenes">Órdenes</Link></li>
-        <li><Link to="/envios">Envíos</Link></li>
+        <li><Link to="/stores">Envíos</Link></li>
         <li><Link to="/resenas">Reseñas</Link></li>
         <li><Link to="/categorias">Categorías</Link></li>
         <li><Link to="/promociones">Promociones</Link></li>
