@@ -22,17 +22,19 @@ const reviews = [
 function Reviews() {
   return ( 
     <div className="reviews-container">
-      <h1>Reseñas de Clientes</h1>
-      <div className="reviews-list">
-        {reviews.map((review, index) => (
-          <div key={index} className="review-card">
-            <h3>{review.name}</h3>
-            <div className="stars">
-              {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+      <div className="reviews-content">
+        <h1>Reseñas de Clientes</h1>
+        <div className="reviews-list">
+          {reviews.map((review, index) => (
+            <div key={index} className="review-card">
+              <h3>{review.name}</h3>
+              <div className="stars">
+                {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+              </div>
+              <p>{review.text}</p>
             </div>
-            <p>{review.text}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
