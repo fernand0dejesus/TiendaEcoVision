@@ -1,0 +1,63 @@
+.categorias-container {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Para centrar el contenido verticalmente */
+}
+
+.categorias-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.categorias-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8B4513;
+}
+
+.categorias-list {
+    display: flex;
+    flex-direction: row; /* Cambiar a fila */
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si es necesario */
+    gap: 25px;
+    justify-content: center; /* Centrar las tarjetas horizontalmente */
+}
+
+.categoria-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-left: 6px solid #D4A16A;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    width: 250px; /* Fijar un ancho para las tarjetas */
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+}
+
+.categoria-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.categoria-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.categoria-info h3 {
+    margin: 0 0 10px;
+    color: #8B4513;
+}

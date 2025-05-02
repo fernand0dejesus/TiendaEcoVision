@@ -9,7 +9,7 @@ import Orders from './pages/Orders.jsx'; // 👈 Importa Orders
 import Footer from './components/Footer';
 import Stores from './pages/Stores.jsx';
 import Reviews from './pages/Reviews.jsx';
-
+import Categorias from './pages/Categorias.jsx'; // ✅ importa
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route path="/ordenes" element={<Orders />} /> {/* 👈 Usa Orders aquí */}
         <Route path="/stores" element={<Stores/>} />
         <Route path="/resenas" element={<Reviews/>} />
-        <Route path="/categorias" element={<div>Categorías</div>} />
+        <Route path="/categorias" element={<Categorias />} /> {/* ✅ ruta añadida */}
         <Route path="/promociones" element={<div>Promociones</div>} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
