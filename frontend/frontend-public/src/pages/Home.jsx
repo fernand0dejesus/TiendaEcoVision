@@ -13,7 +13,13 @@ function Home() {
     <div className="home-container">
       <header className="top-bar">
         {/* ... menú y barra de búsqueda ... */}
+
+        <h1>Ropa</h1>
+        <h1>Ropa</h1>
+        <h1>Ropa</h1>
+
       </header>
+     
 
       <main className="image-section">
         {/* Primera fila de productos */}
@@ -67,9 +73,8 @@ function Home() {
         </div>
       </main>
 
-      <footer className="footer">
+      
         {/* ... pie de página ... */}
-      </footer>
     </div>
   );
 }
