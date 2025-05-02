@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Stores from './pages/Stores.jsx';
 import Reviews from './pages/Reviews.jsx';
 import Categorias from './pages/Categorias.jsx'; // ✅ importa
+import Promotions from './pages/Promotions.jsx';  // ✅ Importa Promotions
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
         <Route path="/stores" element={<Stores/>} />
         <Route path="/resenas" element={<Reviews/>} />
         <Route path="/categorias" element={<Categorias />} /> {/* ✅ ruta añadida */}
-        <Route path="/promociones" element={<div>Promociones</div>} />
+        <Route path="/promociones" element={<Promotions />} /> {/* Añade la ruta aquí */}
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
          
