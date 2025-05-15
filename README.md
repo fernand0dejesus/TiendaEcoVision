@@ -8,6 +8,7 @@ Objetivo del Proyecto
 Desarrollar una plataforma web y móvil de comercio electrónico que facilite la visualización, compra y contratación de ropa ecologica , con una experiencia de usuario optimizada, moderna y ecológicamente responsable.
 
 Equipo de Desarrollo 
+
 Fernando de Jesus Hernandez Morales Coordinador
 
 
