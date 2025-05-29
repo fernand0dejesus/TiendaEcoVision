@@ -1,46 +1,56 @@
-//Array de metodos (C R U D)
-const categoriesController = {};
-import categoriesModel from "../models/categories.js";
+/*
+ * Este archivo define los controladores para gestionar las operaciones CRUD
+ * (Crear, Leer, Actualizar y Eliminar) de la colección "categories" en MongoDB.
+ *
+ * Se utilizan métodos de Mongoose para interactuar con la base de datos.
+ * Cada función está asociada con un endpoint o ruta,
+ * de tal manera que si visito localhost:4000/categories/ con POST y le envío datos, se ejecutará createCategories
+ *
+ * TODO: Implementar validaciones de datos y manejo de errores más robusto en las operaciones.
+ */
 
-// SELECT
+const categoriesController = {};
+import categoriesModel from "../models/Categories.js";
+
+// READ: Select a todas las categorias
 categoriesController.getcategories = async (req, res) => {
   const categories = await categoriesModel.find();
   res.json(categories);
 };
 
-// INSERT
-categoriesController.createcategories = async (req, res) => {
-  const { name, description, } = req.body;
-  const newcategorie = new categoriesModel({ name, description, });
-  await newcategorie.save();
-  res.json({ message: "categorie saved" });
+// READ: Select a una categoria en especifico
+categoriesController.getCategorie = async (req, res) => {
+  const categorie = await categoriesModel.findById(req.params.id);
+  console.log(categorie);
+  res.json(categorie);
 };
 
-// DELETE
+// CREATE: crea una categoria nueva
+categoriesController.createCategories = async (req, res) => {
+  const { name, description, ...otherFields } = req.body;
+  const newCategorie = new categoriesModel({
+    name: name,
+    description: description,
+    ...req.body,
+  });
+  await newCategorie.save();
+  res.json({ message: ["Categories saved"] });
+};
+
+// UPDATE: actualiza una categoria
+categoriesController.updateCategories = async (req, res) => {
+  const { name, description } = req.body;
+  await categoriesModel.findByIdAndUpdate(req.params.id, {
+    name: name,
+    description: description,
+  });
+  res.json({ message: ["Categories updated"] });
+};
+
+// DELETE: Borra una categoria en base al id que me envien
 categoriesController.deletecategories = async (req, res) => {
-  const deletedcategorie = await categoriesModel.findByIdAndDelete(req.params.id);
-  if (!deletedcategorie) {
-    return res.status(404).json({ message: "categorie no encontrado" });
-  }
-  res.json({ message: "categorie deleted" });
-};
-
-// UPDATE
-categoriesController.updatecategories = async (req, res) => {
-  // Solicito todos los valores
-  const { name, description, } = req.body;
-  // Actualizo
-  await categoriesModel.findByIdAndUpdate(
-    req.params.id,
-    {
-      name,
-      description,
-     
-    },
-    { new: true }
-  );
-  // muestro un mensaje que todo se actualizo
-  res.json({ message: "categorie updated" });
+  await categoriesModel.findByIdAndDelete(req.params.id);
+  res.json({ message: ["Categories deleted"] });
 };
 
 export default categoriesController;

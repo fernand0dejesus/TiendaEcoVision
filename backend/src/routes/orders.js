@@ -1,17 +1,14 @@
 import express from "express";
-import ordersController from "../controllers/ordersController.js";
-// Router() nos ayuda a colocar los metodos
-// que tendra mi ruta
 const router = express.Router();
+import ordersController from '../controllers/ordersController.js';
 
-router
-  .route("/")
-  .get(ordersController.getorders)
-  .post(ordersController.createorders);
+router.route("/")
+  .get(ordersController.getOrders)
+  .post(ordersController.createOrders);
 
-router
-  .route("/:id")
-  .put(ordersController.updateorders)
-  .delete(ordersController.deleteorders);
+router.route("/:id")
+  .get(ordersController.getOrder)
+  .put(ordersController.updateOrders)
+  .delete(ordersController.deleteOrders);
 
 export default router;

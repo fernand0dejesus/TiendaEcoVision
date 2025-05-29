@@ -1,49 +1,59 @@
-/*
+/**
     Campos:
-        nombre
-        descripcion
-        precio
-        stock
-*/
+        idClient
+        Products
+            idProduct
+            quantity
+            subtotal
+        total
+        status
+ */
+
 import { Schema, model } from "mongoose";
 
-const ordersSchema = new Schema(
+const orderSchema = new Schema(
   {
-    idCustomer: {
-        type: Schema.ObjectId,
-        require: true,
-        ref:"customers"
+    idClient: {
+      type: Schema.Types.ObjectId,
+      ref: "Clients", // Referencia a la colección de clientes
+      required: [true, "El ID del cliente es obligatorio"],
     },
-    idProduct: {
-      type: Schema.ObjectId,
-        require: true,
-        ref:"Products"
-    },
+    products: [
+      {
+        idProduct: {
+          type: Schema.Types.ObjectId,
+          ref: "Products", // Referencia a la colección de productos
+          required: true,
+        },
+        quantity: {
+          type: Number,
+          min: [1, "La cantidad debe ser al menos 1"], // Cantidad mínima
+          required: true,
+        },
+        subtotal: {
+          type: Number,
+          required: true,
+          min: [0, "El subtotal no puede ser negativo"],
+        },
+      },
+    ],
     total: {
-      type: Number,
-      require: true,
-      
+      type: Number, // Total del pedido (suma de los subtotales de los productos)
+      required: true,
+      min: [0, "El total no puede ser negativo"],
     },
     status: {
-      type: Boolean,
-      require: true,
-      
-    },
-    shipingAdress: {
       type: String,
-      require: true
-    }
+      enum: {
+        values: ["Pending", "Paid"],
+        message: "El estado del pedido debe ser 'Pending' o 'Paid'",
+      },
+      default: "Pending",
+    },
   },
   {
-    timestamps: true,
-    strict: false,
+    timestamps: true, // Campos createdAt y updatedAt
   }
 );
 
-export default model("orders", ordersSchema);
-/*idCustomers, idProduct, total, status, shipingAdress
-"idCustomers": "ObjectId('67dd959e54b54fcc3510360c')",
-"idProduct": "ObjectId('67dd9936a06f39d3247d3898')",
-"total": 100.00,
-"status": true,
-"shippingAddress": "Calle Ejemplo 123, Ciudad, País"*/
+export default model("Orders", orderSchema);

@@ -1,17 +1,20 @@
 import express from "express";
-import productsController from "../controllers/productsController.js";
-// Router() nos ayuda a colocar los metodos
-// que tendra mi ruta
 const router = express.Router();
+import productsController from "../controllers/productsController.js";
+import multer from "multer";
+
+// Configuración de multer para archivos temporales
+const upload = multer({ dest: "public/" });
 
 router
   .route("/")
-  .get(productsController.getProducts)
-  .post(productsController.createProducts);
+  .get(productsController.getProducts) 
+  .post(upload.single("image"), productsController.createProducts); 
 
 router
   .route("/:id")
-  .put(productsController.updateProducts)
-  .delete(productsController.deleteProducts);
+  .get(productsController.getProduct) 
+  .put(upload.single("image"), productsController.updateProduct) 
+  .delete(productsController.deleteProduct); 
 
 export default router;

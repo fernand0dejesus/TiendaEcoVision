@@ -1,14 +1,13 @@
 import { useAuth } from "../hooks/useAuth";
 import React, { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { useNavigate, Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
-import Employees from "../pages/Employees";
+import { useNavigate } from "react-router-dom";
+import "../styles/Login.css"; // Asegúrate de importar tu archivo CSS
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, Login, logout, authCokie, setAuthCokie } = useAuth();
+  const { Login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,8 +22,9 @@ const Login = () => {
       toast.error(result.message || "Credenciales incorrectas.");
       return;
     }
-    
-    
+
+    // Redirigir a dashboard u otra página tras login exitoso
+    navigate("/employees");
   };
 
   useEffect(() => {
@@ -33,56 +33,34 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 h-screen">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
-          Iniciar Sesión
-        </h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 font-medium mb-2"
-            >
-              Correo Electrónico
-            </label>
-            <input
-              type="text"
-              id="email"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="password"
-              className="block text-gray-700 font-medium mb-2"
-            >
-              Contraseña
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
-          >
-            Iniciar Sesión
-          </button>
+    <div className="login-page">
+      <div className="logo">MiApp</div>
+
+      <div className="login-form-wrapper">
+        <form onSubmit={handleSubmit} className="login-form">
+          <h2>Iniciar Sesión</h2>
+          <hr className="divider" />
+          <input
+            type="text"
+            placeholder="Correo Electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className="login-btn">Ingresar</button>
         </form>
-        <Toaster
-          toastOptions={{
-            duration: 2000,
-          }}
-        />
       </div>
 
+      <Toaster
+        toastOptions={{
+          duration: 2000,
+        }}
+      />
     </div>
   );
 };

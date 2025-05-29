@@ -1,16 +1,29 @@
-//importo la libreria que acabo de intalar
 import dotenv from "dotenv";
-//Ejecuto "Doten"
-//me ayudara a acceder al .env
+
 dotenv.config();
 
 export const config = {
-    db:{
-        URI:
-               process.env.DB_URI || "mongodb+srv://fjsdeveloper1:ITR2025@mopt.jv6g0.mongodb.net/?retryWrites=true&w=majority&appName=MOPT"
-    },
-    server:{
-     port: process.env.PORT || 4000   
-    },
-
+  db: {
+    URI: process.env.DB_URI || "mongodb://localhost:27017/byteShop",
+  },
+  server: {
+    port: process.env.PORT || 4000,
+  },
+  jwt: {
+    secret: process.env.JWT_SECRET || "secreto123",
+    expiresIn: process.env.JWT_EXPIRES_IN || "30d",
+  },
+  email: {
+    email: "noreply.byteshop@gmail.com",
+    password: process.env.APP_PASSWORD_EMAIL,
+  },
+  admin: {
+    email: process.env.ADMIN_EMAIL,
+    password: process.env.ADMIN_PASSWORD,
+  },
+  paypal: {
+    clientId: process.env.PAYPAL_API_CLIENT_ID,
+    clientSecret: process.env.PAYPAL_API_SECRET,
+    PAYPAL_API: "https://api-m.sandbox.paypal.com/",
+  },
 };
