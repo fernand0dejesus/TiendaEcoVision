@@ -21,20 +21,20 @@ const Models = () => {
     <>
       <div className="min-h-screen bg-gray-100 p-6">
         <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Modelos</h1>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">Colecciones</h1>
           <div>
             <div className="flex border-b border-gray-200 mb-4">
               <button
                 className="px-4 py-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:border-b-2 focus:border-blue-500"
                 onClick={() => setActiveTab("list")}
               >
-                Lista de Modelos
+                Lista de Colecciones
               </button>
               <button
                 className="px-4 py-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:border-b-2 focus:border-blue-500"
                 onClick={() => setActiveTab("form")}
               >
-                Gestionar Modelo
+                Gestionar Colleccion
               </button>
             </div>
             <div>

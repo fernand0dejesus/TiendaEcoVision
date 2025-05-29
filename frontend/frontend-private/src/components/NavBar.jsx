@@ -16,7 +16,7 @@ const NavBar = () => {
   if (!authCokie) return null;
 
   const navItems = [
-    { to: "/models", label: "Modelos" },
+    { to: "/models", label: "Coleccion" },
     { to: "/brands", label: "Marcas" },
     { to: "/employees", label: "Empleados" },
     { to: "/categories", label: "Categorías" },

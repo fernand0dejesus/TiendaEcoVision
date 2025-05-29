@@ -58,7 +58,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <CardDashboard label="Empleados" data={data.employees} />
           <CardDashboard label="Marcas" data={data.brands} />
-          <CardDashboard label="Modelos" data={data.models} />
+          <CardDashboard label="Coleccion de ropa" data={data.models} />
           <CardDashboard label="Categorias" data={data.categories} />
         </div>
       </div>

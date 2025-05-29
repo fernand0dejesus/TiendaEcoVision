@@ -6,15 +6,15 @@ const useDataModels = () => {
   const { authCokie } = useAuth();
   //estado para manejar el tab activo
   const [activeTab, setActiveTab] = useState("list");
-  //estado para almacenar la información de los modelos que devuelve el api
+  //estado para almacenar la información de los coleccions que devuelve el api
   const [models, setModels] = useState([]);
   //estado para manejar loading
   const [loading, setLoading] = useState(false);
-  //estado para manejar el nombre del modelo y id al editar un modelo
+  //estado para manejar el nombre del coleccion y id al editar un coleccion
   const [modelName, setModelName] = useState("");
   const [id, setId] = useState("");
 
-  //funcion para consultar los modelos
+  //funcion para consultar los coleccions
   const fetchModels = async () => {
     const response = await fetch("http://localhost:4000/api/models", {
       method: "GET",
@@ -32,7 +32,7 @@ const useDataModels = () => {
     setLoading(false);
   };
 
-  // funcion para guardar un nuevo modelo
+  // funcion para guardar un nuevo coleccion
   const saveModels = async (e) => {
     e.preventDefault();
 
@@ -58,17 +58,17 @@ const useDataModels = () => {
 
     //const data = await response.json();
 
-    toast.success("Modelo registrado exitosamente");
+    toast.success("coleccion registrado exitosamente");
     fetchModels();
     setModelName("");
   };
 
-  // useEffect para cargar los modelos al cargar la página
+  // useEffect para cargar los coleccions al cargar la página
   useEffect(() => {
     fetchModels();
   }, []);
 
-  //funcion para eliminar un modelo
+  //funcion para eliminar un coleccion
   const deleteModel = async (id) => {
     const response = await fetch(`http://localhost:4000/api/models/${id}`, {
       method: "DELETE",
@@ -80,23 +80,23 @@ const useDataModels = () => {
     });
 
     if (!response.ok) {
-      throw new Error("Hubo un error al eliminar el modelo");
+      throw new Error("Hubo un error al eliminar el coleccion");
     }
 
     // const data = await response.json();
 
-    toast.success("Modelo Eliminado");
+    toast.success("coleccion Eliminado");
     fetchModels();
   };
 
-  //funcion para tomar la información de un modelo al editar
+  //funcion para tomar la información de un coleccion al editar
   const updateModels = async (model) => {
     setId(model._id);
     setModelName(model.name);
     setActiveTab("form");
   };
 
-  //funcion para editar un modelo
+  //funcion para editar un coleccion
   const handleEdit = async (e) => {
     e.preventDefault();
     const updatedModel = {
@@ -112,9 +112,9 @@ const useDataModels = () => {
       body: JSON.stringify(updatedModel),
     });
     if (!response.ok) {
-      throw new Error("Error al actualizar la modelo");
+      throw new Error("Error al actualizar la coleccion");
     }
-    toast.success("Modelo actualizado");
+    toast.success("coleccion actualizado");
     setModelName("");
     setId(""); // Limpiar el ID
     setActiveTab("list");

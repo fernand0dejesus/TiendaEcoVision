@@ -7,7 +7,7 @@ const ModelsCard = ({ model, deleteModel, updateModels }) => {
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
       <div className="px-6 py-4">
         <TitleCard 
-        title="Modelo"
+        title="Coleccion"
         description={model.name}
         />
 

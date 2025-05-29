@@ -10,7 +10,7 @@ const RegisterModels=({saveModels,setModelName, modelName, handleEdit, id})=>{
               className="block text-gray-700 font-bold mb-2"
               htmlFor="name"
             >
-              Nombre Modelo: {modelName}
+              Nombre Collecion: {modelName}
             </label>
             <input
               type="text"
