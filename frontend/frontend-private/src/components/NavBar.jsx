@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate, NavLink } from "react-router-dom";
+import "../styles/NavBar.css";  // Importa el estilo
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -23,37 +24,53 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="navbar-green">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
         <div className="text-lg font-bold">
           <NavLink
             to="/dashboard"
             className={({ isActive }) =>
-              isActive ? "text-blue-500 font-bold" : "text-gray-300 hover:text-gray-400"
+              isActive ? "active logo-link" : "logo-link"
             }
           >
-            ByteShop
+            EcoVision
           </NavLink>
         </div>
 
-        {/* Botón hamburguesa */}
+        {/* Botón hamburguesa (solo visible en móvil) */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-gray-300 hover:text-white focus:outline-none"
+            className="hamburger-btn"
+            aria-label="Toggle menu"
           >
-            ☰
+            {/* SVG hamburguesa */}
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
         </div>
 
-        {/* Menú para pantallas medianas en adelante */}
-        <ul className="hidden md:flex space-x-6">
+        {/* Menú principal (desktop) */}
+        <ul className="hidden md:flex space-x-8">
           {navItems.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  isActive ? "text-blue-500 font-bold" : "text-gray-300 hover:text-gray-400"
+                  isActive ? "active nav-link" : "nav-link"
                 }
               >
                 {item.label}
@@ -62,12 +79,9 @@ const NavBar = () => {
           ))}
         </ul>
 
-        {/* Botón de logout en pantallas grandes */}
+        {/* Botón logout desktop */}
         <div className="hidden md:block">
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-            onClick={handleLogout}
-          >
+          <button className="btn-logout" onClick={handleLogout}>
             Cerrar Sesión
           </button>
         </div>
@@ -75,16 +89,16 @@ const NavBar = () => {
 
       {/* Menú móvil desplegable */}
       {isMobileMenuOpen && (
-        <div className="md:hidden px-4 pb-3">
-          <ul className="space-y-2">
+        <div className="mobile-menu md:hidden px-4 pb-3">
+          <ul className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <li key={item.to}>
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>
-                    isActive ? "text-blue-500 font-bold" : "text-gray-300 hover:text-gray-400"
+                    isActive ? "active nav-link" : "nav-link"
                   }
-                  onClick={() => setIsMobileMenuOpen(false)} // Cierra menú al hacer click
+                  onClick={() => setIsMobileMenuOpen(false)} // Cierra menú al click
                 >
                   {item.label}
                 </NavLink>
@@ -92,7 +106,7 @@ const NavBar = () => {
             ))}
             <li>
               <button
-                className="w-full text-left bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                className="btn-logout w-full text-left"
                 onClick={handleLogout}
               >
                 Cerrar Sesión

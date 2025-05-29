@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <div className="logo">MiApp</div>
+      <div className="logo">EcoVision</div>
 
       <div className="login-form-wrapper">
         <form onSubmit={handleSubmit} className="login-form">

@@ -1,0 +1,128 @@
+/* NavBar.css - versión verde claro */
+
+/* Contenedor principal navbar */
+.navbar-green {
+  background-color: #a7f3d0; /* Verde pastel claro */
+  color: #065f46; /* Verde oscuro para texto */
+  box-shadow: 0 2px 6px rgba(6, 95, 70, 0.2);
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Contenedor interno */
+.navbar-green > div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+/* Logo */
+.logo-link {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700;
+  color: #065f46;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.logo-link:hover {
+  color: #10b981; /* Verde vibrante */
+}
+
+/* Links navegación desktop y móvil */
+.nav-link {
+  color: #065f46;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+}
+.nav-link:hover,
+.active.nav-link {
+  color: #10b981; /* Verde vibrante */
+  border-bottom-color: #10b981;
+}
+
+/* Botón logout */
+.btn-logout {
+  background-color: #6ee7b7; /* Verde claro */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  color: #065f46;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+}
+.btn-logout:hover {
+  background-color: #10b981; /* Verde vibrante */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+}
+
+/* Botón hamburguesa */
+.hamburger-btn {
+  font-size: 1.75rem;
+  color: #065f46;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.hamburger-btn:hover {
+  color: #10b981;
+}
+
+/* Menú móvil desplegable */
+.mobile-menu {
+  background-color: #6ee7b7; /* Verde claro más saturado */
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+.mobile-menu ul li a {
+  font-size: 1.125rem;
+  color: #065f46;
+  display: block;
+}
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+  color: #10b981;
+}
+.mobile-menu button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #34d399;
+  color: #065f46;
+  box-shadow: 0 2px 6px rgba(52, 211, 153, 0.4);
+}
+.mobile-menu button:hover {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.6);
+}
+
+/* Ocultar menú móvil en desktop */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
