@@ -1,7 +1,8 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import ListBrands from "../components/Brands/ListBrands";
 import RegisterBrand from "../components/Brands/RegisterBrand";
 import useDataBrands from "../components/Brands/hooks/useDataBrands";
+
 const Brands = () => {
   const {
     activeTab,
@@ -15,7 +16,17 @@ const Brands = () => {
     deleteBrand,
     updateBrands,
   } = useDataBrands();
-  
+
+  // Aquí defines la función handleEdit
+  const handleEdit = (brandId) => {
+    // Lógica para cargar los datos de la marca que se desea editar
+    const brandToEdit = brands.find(brand => brand.id === brandId);
+    if (brandToEdit) {
+      setId(brandToEdit.id);
+      setNameBrand(brandToEdit.name);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
@@ -55,15 +66,15 @@ const Brands = () => {
                   saveBrand={saveBrand}
                   nameBrand={nameBrand}
                   id={id}
-                  handleEdit={handleEdit}
+                  handleEdit={handleEdit} 
                 />
               </div>
             )}
           </div>
         </div>
       </div>
-
     </div>
   );
 };
+
 export default Brands;
