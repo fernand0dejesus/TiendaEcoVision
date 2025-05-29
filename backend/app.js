@@ -8,6 +8,31 @@ import reviewsRoutes from "./src/routes/reviews.js";
 import categoriesRoutes from "./src/routes/categories.js";
 import promotionsRoutes from "./src/routes/promotions.js";
 
+
+import cors from "cors";
+import employeesRoutes from "./routes/employees.js";
+
+import loginRoutes from "./routes/login.js";
+import registerClientRoutes from "./routes/registerClient.js";
+import registerEmployeesRoutes from "./routes/registerEmployee.js";
+import logoutRoutes from "./routes/logout.js";
+import dotenv from "dotenv";
+
+import clientsRoutes from "./routes/clients.js";
+dotenv.config();
+
+
+// Middlewares
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Dominio del cliente
+    credentials: true, // Permitir envío de cookies y credenciales
+  })
+);
+app.use(express.json());
+app.use(cookieParser());
+import { validateAuthToken } from "./middlewares/validateAuthToken.js";
+
 //routes
 
 // Creo una constante que es igual a la libreria que importé
@@ -24,6 +49,17 @@ app.use("/api/shipments", shipmentsRoutes);
 app.use("/api/reviews", reviewsRoutes);
 app.use("/api/categories",categoriesRoutes);
 app.use("/api/promotions", promotionsRoutes);
+app.use("/api/logout", logoutRoutes);
+app.use("/api/employees", employeesRoutes);
+app.use("/api/clients", clientsRoutes);
+
+
+
+// Rutas publicas que no necesitan haber iniciado sesión
+app.use("/api/login", loginRoutes);
+app.use("/api/registerClients", registerClientRoutes);
+app.use("/api/registerEmployees", registerEmployeesRoutes);
+app.use("/api/passwordRecovery", passwordRecoveryRoutes);
 // Exporto la constante para poder usar express en otros archivos
 export default app;
  

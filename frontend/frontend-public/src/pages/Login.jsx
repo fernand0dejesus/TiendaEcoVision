@@ -4,7 +4,7 @@ function Login() {
   return (
     <div className="login-page">
       <div className="header-bg">
-        <div className="logo">🌿 EcoVision</div>
+        <div className="logo">🌿 EcoVisfion</div>
         <h1 className="bg-title">Iniciar Sesión</h1>
       </div>
 
