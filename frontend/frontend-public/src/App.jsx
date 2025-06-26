@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+// Importa los componentes y páginas necesarios
 
 import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.jsx';
