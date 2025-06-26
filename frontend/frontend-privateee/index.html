@@ -8,7 +8,7 @@
     <title>EcoVision</title>
 
     <style>
-      /* ✅ Posicionamiento fijo abajo a la izquierda */
+      /* Logo fijo abajo a la izquierda */
       .fixed-logo {
         position: fixed;
         bottom: 1rem;
@@ -16,11 +16,24 @@
         height: 75px;
         z-index: 50;
       }
+
+      /* Imagen decorativa fondo.png más grande y más abajo */
+      .fondo-image {
+        position: fixed;
+        top: 6rem; /* ↘️ la baja más hacia el centro de la pantalla */
+        right: 1rem;
+        height: 200px; /* ↗️ la hace más grande */
+        z-index: 40;
+        opacity: 0.85; /* opcional */
+      }
     </style>
   </head>
   <body>
-    <!-- ✅ Logo fijo abajo a la izquierda -->
+    <!-- Logo EcoVision -->
     <img src="/Logo/logo.png" alt="EcoVision Logo" class="fixed-logo" />
+
+    <!-- Imagen decorativa fondo.png -->
+    <img src="/Imagenes/fondo.png" alt="Fondo decorativo" class="fondo-image" />
 
     <!-- React se monta aquí -->
     <div id="root"></div>
